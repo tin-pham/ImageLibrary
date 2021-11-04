@@ -1,0 +1,22 @@
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet--bigger {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin tablet--landscape {
+  @media (min-width: 1000px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
