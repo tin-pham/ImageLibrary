@@ -62,8 +62,8 @@ export default {
   }
 
   @include desktop {
-    top: -20rem;
-    left: -6rem;
+    top: -24rem;
+    left: -9rem;
     transform: scale(1);
   }
   img {

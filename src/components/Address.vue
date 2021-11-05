@@ -38,21 +38,53 @@ export default {};
   }
   li {
     position: relative;
-    padding-left: 1em;
+    padding-left: 1rem;
     left: 6rem;
+    letter-spacing: 1px;
+
+    transition: all 0.1s ease-in;
+    &:hover {
+      padding-left: 0.2em;
+      letter-spacing: 0.2em;
+    }
   }
   li::marker {
     font-family: 'Font Awesome 5 Brands';
     position: relative;
   }
-  .pixiv::marker {
-    content: url('https://api.iconify.design/simple-icons/pixiv.svg?height=24');
+  .pixiv {
+    &:hover {
+      color: $blue-400;
+    }
+    &::marker {
+      content: url('https://api.iconify.design/simple-icons/pixiv.svg?height=24');
+    }
+    &:hover::marker {
+      content: url('https://api.iconify.design/simple-icons/pixiv.svg?color=%230077b6&height=24');
+    }
   }
-  .twitter::marker {
-    content: '\f099';
+  .spotify {
+    &:hover {
+      color: $green-400;
+    }
+    &::marker {
+      content: '\f1bc';
+    }
+    &:hover::marker {
+      color: $green-400;
+    }
   }
-  .spotify::marker {
-    content: '\f1bc';
+
+  .twitter {
+    &:hover {
+      color: $blue-300;
+    }
+    &::marker {
+      content: '\f099';
+    }
+    &:hover::marker {
+      color: $blue-300;
+    }
   }
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <p v-if="!isLoaded" class="loading">Loading</p>
   <div class="about">
     <div class="about__field">
       <h1 class="about__title">Contact Me</h1>
@@ -16,6 +17,14 @@ import Form from '@/components/Form.vue';
 import Address from '@/components/Address.vue';
 export default {
   components: { Form, Address },
+  data() {
+    return {
+      isLoaded: false,
+    };
+  },
+  mounted() {
+    this.isLoaded = true;
+  },
 };
 </script>
 

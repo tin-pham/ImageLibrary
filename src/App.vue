@@ -21,12 +21,16 @@ $appBackgroundColor: hsl($blue-800);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  user-select: none;
+  *::selection {
+    color: white;
+    background: hsl($yellow);
+  }
 }
 
 .container {
   position: relative;
   background-color: $appBackgroundColor;
-  overflow: hidden;
   min-height: 100vh;
 }
 </style>
